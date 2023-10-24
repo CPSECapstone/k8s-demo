@@ -1,5 +1,6 @@
-# Kubernetes (k8s)
 ![](https://logos-world.net/wp-content/uploads/2023/06/Kubernetes-Logo.png)
+
+# Kubernetes (k8s)
 #### **Prerequisites**
 - Familiarity with container technologies such as Docker
 
