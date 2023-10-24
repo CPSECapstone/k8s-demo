@@ -4,13 +4,12 @@
 - Familiarity with container technologies such as Docker
 
 ### **Overview**
-Here's what we'll discuss today. Click on any top-level heading to jump directly to that section.
-- [**Why Kubernetes?**]()
-- [**Design principles**]()
-- [**Basic objects in Kuberentes**]()
-- [**The kuberenetes control plane**]()
-- [**When not to use Kubernetes**]()
-- [**Live Demo**]()
+- **Why Kubernetes?**
+- **Design principles**
+- **Basic objects in Kuberentes**
+- **The kuberentes control plane**
+- **When not to use Kubernetes**
+- **Live Demo**
 - **Q&A**
 
 ### **Why Kuberenetes?**
@@ -29,10 +28,14 @@ Now that we understand the motivation for container orchestration in general, le
 - Declarative: 
     - The most important design principle in Kubernetes is that we simply define the desired state of our system and let Kubernetes automation work to ensure that the actual state of the system reflects these desires.
 - Distributed
-![](https://www.jeremyjordan.me/content/images/2019/11/distributed_systems.png)
-    - Kubernetes is designed to provide the infrastructural layer for such distributed systems, yielding clean abstractions to build applications on top of a collection of machines (collectively known as a cluster).
+    
+    Kubernetes is designed to provide the infrastructural layer for distributed systems, yielding clean abstractions to build applications on top of a collection of machines (collectively known as a cluster).
+
+    ![](https://www.jeremyjordan.me/content/images/2019/11/distributed_systems.png)
+
 - Decoupled
     - It is commonly recommended that containers be developed with a single concern in mind. As a result, developing containerized applications lends itself quite nicely to the microservice architecture design pattern, which recommends "designing software applications as suites of independently deployable services."
+    
 - Immutable infrastructure
     - In order to achieve the most benefit from containers and container orchestration, you should be deploying immutable infrastructure. This is, rather than logging in to a container on a machine to make changes (eg. updating a library), you should build a new container image, deploy the new version, and terminate the older version.
 
@@ -71,12 +74,12 @@ Now that we understand the motivation for container orchestration in general, le
     - Secret: For storing sensitive credentials.
     - Namespace (NS): For separating resources on your cluster.
 
-### **The kuberenetes control plane**
+### **The kubernetes control plane**
 By this point, you're probably wondering how Kubernetes is capable of taking all of our object specifications and actually executing these workloads on a cluster.
-![](https://www.jeremyjordan.me/content/images/2019/11/full_picture-1.png)
 - Master node
 - Worker node
 
+![](https://www.jeremyjordan.me/content/images/2019/11/full_picture-1.png)
 
 ### **When not to use Kubernetes**
 - You can run your workload on a single machine.
