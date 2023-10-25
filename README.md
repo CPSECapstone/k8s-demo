@@ -26,8 +26,10 @@
 
 ### **Design principles**
 Now that we understand the motivation for container orchestration in general, let's spend some time to discuss the motivating design principles behind Kubernetes.
-- Declarative: 
-    - The most important design principle in Kubernetes is that we simply define the desired state of our system and let Kubernetes automation work to ensure that the actual state of the system reflects these desires.
+- Declarative
+    
+    The most important design principle in Kubernetes is that we simply define the desired state of our system and let Kubernetes automation work to ensure that the actual state of the system reflects these desires.
+
 - Distributed
     
     Kubernetes is designed to provide the infrastructural layer for distributed systems, yielding clean abstractions to build applications on top of a collection of machines (collectively known as a cluster).
@@ -35,10 +37,12 @@ Now that we understand the motivation for container orchestration in general, le
     ![](https://www.jeremyjordan.me/content/images/2019/11/distributed_systems.png)
 
 - Decoupled
-    - It is commonly recommended that containers be developed with a single concern in mind. As a result, developing containerized applications lends itself quite nicely to the microservice architecture design pattern, which recommends "designing software applications as suites of independently deployable services."
+    
+    It is commonly recommended that containers be developed with a single concern in mind. As a result, developing containerized applications lends itself quite nicely to the microservice architecture design pattern, which recommends "designing software applications as suites of independently deployable services."
     
 - Immutable infrastructure
-    - In order to achieve the most benefit from containers and container orchestration, you should be deploying immutable infrastructure. This is, rather than logging in to a container on a machine to make changes (eg. updating a library), you should build a new container image, deploy the new version, and terminate the older version.
+    
+    In order to achieve the most benefit from containers and container orchestration, you should be deploying immutable infrastructure. This is, rather than logging in to a container on a machine to make changes (eg. updating a library), you should build a new container image, deploy the new version, and terminate the older version.
 
 ### **Basic objects in Kubernetes**
 - Pod
